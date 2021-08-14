@@ -1,0 +1,4 @@
+/*
+profiles.js holds all of the user profiles as objects.
+New objects are created in script.js and written into this file.
+*/
