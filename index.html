@@ -6,12 +6,81 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
         
   </head>  
   
   <body>
+    <section name="character-entry">
+
+      <input name="user-name" type="text" value="Enter user name">
+      <br>
+
+      <input name="character-name" type="text" value="Enter character name">
+      <br>
+      
+      <label for="class-list">Select Class</label>
+      <select name="class-list">
+        <option>Artificer</option>
+        <option>Barbarian</option>
+        <option>Bard</option>
+        <option>Blood Hunter</option>
+        <option>Cleric</option>
+        <option>Druid</option>
+        <option>Fighter</option>
+        <option>Monk</option>
+        <option>Paladin</option>
+        <option>Ranger</option>
+        <option>Rogue</option>
+        <option>Sorcerer</option>
+        <option>Warlock</option>
+        <option>Wizard</option>
+      </select>
+      <br>
+
+      <label for="powerful-build">Powerful Build</label>
+      <input name="powerful-build" type="checkbox">
+
+    </section>
+
+    <hr>
     
+    <section name="equipment-select">
+
+      <label for="equipment-choice">Search Equipment:</label>
+      <input list="equipment-list" id="equipment-choice" name="equipment-list" />
+      <datalist id="equipment-list">
+        <option>Sword</option>
+        <option>Bow</option>
+        <option>Axe</option>
+      </datalist>
+      <br>
+
+      <table name="currency">
+        <tr>
+          <td><label for="copper">Copper</label></td>
+          <td><input name="copper" type="number" step="10"></td>          
+        </tr>
+        <tr>
+          <td><label for="silver">Silver</label></td>
+          <td><input name="silver" type="number" step="10"></td>
+        </tr>
+        <tr>
+          <td><label for="electrum">Electrum</label></td>
+          <td><input name="electrum" type="number" step="10"></td>
+        </tr>
+        <tr>
+          <td><label for="gold">Gold</label></td>
+          <td><input name="gold" type="number" step="10"></td>
+        </tr>
+        <tr>
+          <td><label for="platinum">Platinum</label></td>
+          <td><input name="platinum" type="number" step="10"></td>
+        </tr>
+      </table>
+
+    </section>
+
   </body>
 </html>
