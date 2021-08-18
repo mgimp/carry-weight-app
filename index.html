@@ -6,81 +6,151 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="script.js" type="" defer></script>
         
-  </head>  
+  </head>
   
   <body>
-    <section name="character-entry">
 
-      <input name="user-name" type="text" value="Enter user name">
-      <br>
+    <div class="grid-container">
+      <div class="item1"> <!--Header-->
+        Header
+      </div>  
 
-      <input name="character-name" type="text" value="Enter character name">
-      <br>
-      
-      <label for="class-list">Select Class</label>
-      <select name="class-list">
-        <option>Artificer</option>
-        <option>Barbarian</option>
-        <option>Bard</option>
-        <option>Blood Hunter</option>
-        <option>Cleric</option>
-        <option>Druid</option>
-        <option>Fighter</option>
-        <option>Monk</option>
-        <option>Paladin</option>
-        <option>Ranger</option>
-        <option>Rogue</option>
-        <option>Sorcerer</option>
-        <option>Warlock</option>
-        <option>Wizard</option>
-      </select>
-      <br>
+      <div class="item2"> <!--user-name-->
+        <!--App should eventually work with user profiles rather than specifying the user at character enty-->
+        <input name="user-name" type="text" value="Enter user name">
+      </div>
 
-      <label for="powerful-build">Powerful Build</label>
-      <input name="powerful-build" type="checkbox">
+      <div class="item3"> <!--character-name-->
+        <input name="character-name" type="text" value="Enter character name">
+      </div>
 
-    </section>
+      <div class="item4"> <!--class-select-1-->
+        <!--Some classes might have carry weight modifiers. This is also useful to keeping track of your character.-->
+        <label for="class-list">Select Class</label>
+        <select name="class-list">
+          <option>Artificer</option>
+          <option>Barbarian</option>
+          <option>Bard</option>
+          <option>Blood Hunter</option>
+          <option>Cleric</option>
+          <option>Druid</option>
+          <option>Fighter</option>
+          <option>Monk</option>
+          <option>Paladin</option>
+          <option>Ranger</option>
+          <option>Rogue</option>
+          <option>Sorcerer</option>
+          <option>Warlock</option>
+          <option>Wizard</option>
+        </select>
+      </div>
 
-    <hr>
-    
-    <section name="equipment-select">
+      <div class="item5"> <!--class-select-2-->
+        <label for="second-class-list">Select Second Class (if applicable)</label>
+        <select name="second-class-list">
+          <option>-</option>
+          <option>Artificer</option>
+          <option>Barbarian</option>
+          <option>Bard</option>
+          <option>Blood Hunter</option>
+          <option>Cleric</option>
+          <option>Druid</option>
+          <option>Fighter</option>
+          <option>Monk</option>
+          <option>Paladin</option>
+          <option>Ranger</option>
+          <option>Rogue</option>
+          <option>Sorcerer</option>
+          <option>Warlock</option>
+          <option>Wizard</option>
+        </select>
+      </div>
 
-      <label for="equipment-choice">Search Equipment:</label>
-      <input list="equipment-list" id="equipment-choice" name="equipment-list" />
-      <datalist id="equipment-list">
-        <option>Sword</option>
-        <option>Bow</option>
-        <option>Axe</option>
-      </datalist>
-      <br>
+      <div class="item6"> <!--powerful-build-->
+        <label for="powerful-build">Powerful Build</label>
+        <input name="powerful-build" type="checkbox">
+      </div>
 
-      <table name="currency">
-        <tr>
-          <td><label for="copper">Copper</label></td>
-          <td><input name="copper" type="number" step="10"></td>          
-        </tr>
-        <tr>
-          <td><label for="silver">Silver</label></td>
-          <td><input name="silver" type="number" step="10"></td>
-        </tr>
-        <tr>
-          <td><label for="electrum">Electrum</label></td>
-          <td><input name="electrum" type="number" step="10"></td>
-        </tr>
-        <tr>
-          <td><label for="gold">Gold</label></td>
-          <td><input name="gold" type="number" step="10"></td>
-        </tr>
-        <tr>
-          <td><label for="platinum">Platinum</label></td>
-          <td><input name="platinum" type="number" step="10"></td>
-        </tr>
-      </table>
+      <div class="item7"> <!--equipment-select-->
+        <!--
+          User searches to pieces of equipment to add to their inventory and presses the "Add+" button or enter.
+          Pressing enter should clear what's written in the text field for convenience.
+          Added items should appeear in an equipment list window to the right of the text fields.
+          Items entered into the list window should have 'x' buttons to remove them again in case of error.
+          The equipment-list should be populated from an external list of items with descriptions.
+        -->
+        <label for="equipment-choice">Search Equipment</label>
+        <input list="equipment-list" id="equipment-choice" name="equipment-list" />
+        <datalist id="equipment-list">
+          <!--Example options-->
+          <option>Sword</option>
+          <option>Bow</option>
+          <option>Axe</option>
+        </datalist>
+        <input type="number" step="1" />
+        <input id="equipment-list" name="equipment-list-button" type="submit" value="Add+" />
+      </div>
 
-    </section>
+      <div class="item8"> <!--rope-length-->
+        <label for="rope-length">Length of Rope</label>
+        <input id="rope-length" name="rope-length" type="number" step="10" />  
+      </div>
+
+      <div class="item9"> <!--rations-->
+        <label for="rations">Number of Rations</label>
+        <input id="rations" name="rations" type="number" step="1" />       
+      </div>
+
+      <div class="item10">  <!--currency-weight-->
+        <!--
+          Currency is included for cases when money weight is considered.
+          If the coin weight option isn't selected, then the currency table should not appear.
+        -->
+        <label for="money-weight">Coin Weight</label>
+        <input id="money-weight" name="money-weight" type="checkbox" />
+      </div>
+
+      <div class="item11">  <!--currency-table-->
+        <table name="currency">
+          <tr>
+            <td><label for="copper">Copper</label></td>
+            <td><input name="copper" type="number" step="10"></td>          
+          </tr>
+          <tr>
+            <td><label for="silver">Silver</label></td>
+            <td><input name="silver" type="number" step="10"></td>
+          </tr>
+          <tr>
+            <td><label for="electrum">Electrum</label></td>
+            <td><input name="electrum" type="number" step="10"></td>
+          </tr>
+          <tr>
+            <td><label for="gold">Gold</label></td>
+            <td><input name="gold" type="number" step="10"></td>
+          </tr>
+          <tr>
+            <td><label for="platinum">Platinum</label></td>
+            <td><input name="platinum" type="number" step="10"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="item12">  <!--equipment-list-->
+        Equipment List
+      </div>
+
+      <div class="item13">  <!--submission-->
+        <input id="submit" type="submit" value="Submit" />
+      </div>
+
+      <div class="item14">  <!--footer-->
+        Footer
+      </div>
+
+    </div>
 
   </body>
 </html>
