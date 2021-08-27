@@ -1,6 +1,8 @@
 .grid-container {
     display: grid;
     grid-gap: 5px 5px;  /* [grid-row-gap grid-column-gap] */
+    border: 3px solid black;
+    border-radius: 5px;
 }
 
 .grid-container > div {
@@ -9,17 +11,32 @@
     font-size: 15px;
   }
 
-.item1, .item13, .item14 {
-    grid-column: 1 / 5;    /* #column-start / #column-end */
+  /* grid-areas named for easier arrangement of grid cells */
+.item1 {    grid-area: header;  }
+.item2 {    grid-area: character-create;   }
+.item3 {    grid-area: equip-select;   }
+.item4 {    grid-area: currency;   }
+.item5 {    grid-area: equip-list;   }
+.item6 {    grid-area: submit;   }
+.item7 {    grid-area: footer;  }
+
+.grid-container {
+    grid-template-areas: 
+    'header header header header'
+    'character-create equip-list equip-list equip-list'
+    'equip-select equip-list equip-list equip-list'
+    'currency equip-list equip-list equip-list'
+    'submit submit submit submit'
+    'footer footer footer footer';
+    grid-template-columns: 350px auto auto auto;
+}
+
+.item1, .item5, .item6, .item7 {
     text-align: center;
 }
 
-.item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11 {
-    grid-column: 1 / 2;    /* #column-start / #column-end */
+.item3 > input[type=number]  {
+    width: 40px;
 }
 
-.item12 {
-    grid-row: 2 / 12;    /* #row-start / #row-end */
-    grid-column: 2 / 5;    /* #column-start / #column-end */
-    text-align: center;
-}
+ 

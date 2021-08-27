@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    <script src="script.js" type="" defer></script>
+    <script src="script.js" defer></script>
         
   </head>
   
@@ -18,19 +18,19 @@
         Header
       </div>  
 
-      <div class="item2"> <!--user-name-->
+      <div class="item2"> <!--character-creation-->
         <!--App should eventually work with user profiles rather than specifying the user at character enty-->
-        <input name="user-name" type="text" value="Enter user name">
-      </div>
+        <label for="user-name" class="label">User Name</label>
+        <input id="user-name" class="text-entry" name="user-name" type="text" />
+        <br>
 
-      <div class="item3"> <!--character-name-->
-        <input name="character-name" type="text" value="Enter character name">
-      </div>
+        <label for="character-name" class="label">Character Name</label>
+        <input id="character-name" class="text-entry" name="character-name" type="text" />
+        <br>
 
-      <div class="item4"> <!--class-select-1-->
         <!--Some classes might have carry weight modifiers. This is also useful to keeping track of your character.-->
-        <label for="class-list">Select Class</label>
-        <select name="class-list">
+        <label for="class-list" class="label">Select Class</label>
+        <select class="drop-menu" name="class-list">
           <option>Artificer</option>
           <option>Barbarian</option>
           <option>Bard</option>
@@ -46,11 +46,10 @@
           <option>Warlock</option>
           <option>Wizard</option>
         </select>
-      </div>
+        <br>
 
-      <div class="item5"> <!--class-select-2-->
-        <label for="second-class-list">Select Second Class (if applicable)</label>
-        <select name="second-class-list">
+        <label for="second-class-list" class="label">Select Second Class (if applicable)</label>
+        <select class="drop-menu" name="second-class-list">
           <option>-</option>
           <option>Artificer</option>
           <option>Barbarian</option>
@@ -67,14 +66,13 @@
           <option>Warlock</option>
           <option>Wizard</option>
         </select>
-      </div>
+        <br>
 
-      <div class="item6"> <!--powerful-build-->
-        <label for="powerful-build">Powerful Build</label>
+        <label for="powerful-build" class="label">Powerful Build</label>
         <input name="powerful-build" type="checkbox">
       </div>
 
-      <div class="item7"> <!--equipment-select-->
+      <div class="item3"> <!--equipment-selection-->
         <!--
           User searches to pieces of equipment to add to their inventory and presses the "Add+" button or enter.
           Pressing enter should clear what's written in the text field for convenience.
@@ -90,30 +88,28 @@
           <option>Bow</option>
           <option>Axe</option>
         </datalist>
-        <input type="number" step="1" />
+        <input id="equipment-num" type="number" step="1" />
         <input id="equipment-list" name="equipment-list-button" type="submit" value="Add+" />
-      </div>
+        <br>
 
-      <div class="item8"> <!--rope-length-->
         <label for="rope-length">Length of Rope</label>
         <input id="rope-length" name="rope-length" type="number" step="10" />  
-      </div>
+        <br>
 
-      <div class="item9"> <!--rations-->
         <label for="rations">Number of Rations</label>
         <input id="rations" name="rations" type="number" step="1" />       
+        <br>
+
       </div>
 
-      <div class="item10">  <!--currency-weight-->
+      <div class="item4">  <!--currency-->
         <!--
           Currency is included for cases when money weight is considered.
           If the coin weight option isn't selected, then the currency table should not appear.
         -->
         <label for="money-weight">Coin Weight</label>
         <input id="money-weight" name="money-weight" type="checkbox" />
-      </div>
 
-      <div class="item11">  <!--currency-table-->
         <table name="currency">
           <tr>
             <td><label for="copper">Copper</label></td>
@@ -138,15 +134,15 @@
         </table>
       </div>
 
-      <div class="item12">  <!--equipment-list-->
+      <div class="item5">  <!--equipment-list-->
         Equipment List
       </div>
 
-      <div class="item13">  <!--submission-->
+      <div class="item6">  <!--submission-->
         <input id="submit" type="submit" value="Submit" />
       </div>
 
-      <div class="item14">  <!--footer-->
+      <div class="item7">  <!--footer-->
         Footer
       </div>
 
